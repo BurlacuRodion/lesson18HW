@@ -28,7 +28,7 @@ console.log(returnIndex([3,7,2],4))
 
 //----------------------------------------------------//
 
-const array = [2,6,7,9,25,30]
+const array = [2,6,7,9,25,30,'44']
 
 function returnSqrt(arr) {
     return arr.filter((item)=> Number.isInteger(Math.sqrt(item)))
@@ -39,8 +39,8 @@ console.log(returnSqrt(array))
 //=====================================================//
 
 function returnTwoArrays(arr) {
-    const evenArray = arr.filter((item)=> item%2 === 0)
-    const oddArray = arr.filter((item)=> item%2 !== 0)
+    const evenArray = arr.filter((item)=> typeof item === 'number' && item%2 === 0)
+    const oddArray = arr.filter((item)=> typeof item === 'number' && item%2 !== 0)
 
     return `evenArray:[${evenArray}], oddArray:[${oddArray}]`
 
